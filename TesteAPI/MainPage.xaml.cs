@@ -31,32 +31,33 @@ namespace TesteAPI
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            CarregarClientes(Codigo.Text);
 
             string codigo = Codigo.Text?.Trim();
 
             if (string.IsNullOrEmpty(codigo))
             {
                 DisplayAlert("Aviso", "O valor não pode ser nulo!", "OK");
-
+                return;
             }
             else
             {
                 if (!int.TryParse(codigo, out int numero))
                 {
                     DisplayAlert("Aviso", "O código deve ser número", "OK");
+                    return;
                 }
                 else
                 {
                     if (numero > 10 || numero < 1)
                     {
                         DisplayAlert("Aviso", "Usuario não existe, digite de 1 a 10", "OK");
+                        return;
                     }
                 }
             }
 
+            CarregarClientes(Codigo.Text);
 
         }
-
     }
 }

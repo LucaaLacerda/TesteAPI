@@ -6,7 +6,7 @@
     <StackLayout Padding="20">
         <Label Text="Lista de Clientes" FontSize="24" HorizontalOptions="Center" />
         <Entry x:Name="Codigo"> </Entry>
-        <Button Clicked="Button_Clicked" Text="Buscar"> </Button> 
+        <Button Clicked="Button_Clicked" Text="Buscar"/>
 
         <CollectionView x:Name="ClientesListView">
             <CollectionView.ItemTemplate>
