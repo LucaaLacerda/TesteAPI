@@ -1,0 +1,1 @@
+C:\Projeto\TesteAPI\TesteAPI\TesteAPI.csproj;x64
